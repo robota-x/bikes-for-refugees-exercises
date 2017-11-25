@@ -1,0 +1,26 @@
+{
+  "name": "bikes-for-refugees",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodeYourFuture/bikes-for-refugees.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CodeYourFuture/bikes-for-refugees/issues"
+  },
+  "homepage": "https://github.com/CodeYourFuture/bikes-for-refugees#readme",
+  "devDependencies": {
+    "jest": "^21.2.1",
+    "jsdom": "^11.4.0"
+  }
+}
