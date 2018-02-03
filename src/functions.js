@@ -1,5 +1,6 @@
 function getTitle( document ) {
-  // get the title of the document and return it
+  var element = document.getElementsByTagName('title')[0].innerHTML;
+  return element;
 };
 
 function getNumberOfBikes( document ) {
