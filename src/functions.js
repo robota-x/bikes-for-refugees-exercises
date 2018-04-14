@@ -4,6 +4,14 @@ function getTitle( document ) {
 };
 
 function getNumberOfBikes( document ) {
+
+  // var bikeCount = document.getElementById('donation-count-alert').innerHTML;
+  // var numBikes = parseInt(bikeCount);
+  // return numBikes;
+var numberOfBikes=document.getElementById('donation-count-alert').innerHTML;
+var numBikes=parseInt(numberOfBikes);
+return numBikes;
+// var a = parseInt("10")
   // get the number of bikes donated from the tag with id 'donation-count-alert'
   // convert it to an integer and return it
 
@@ -13,10 +21,20 @@ function getNumberOfBikes( document ) {
 
 function getAllButtonText( document ) {
   // get the text inside all tags with class 'btn' and return as an array of strings
-  
+ var buttonStrings=[];
+ var buttons=getElementsByClassName('btn');
+ for(let i=0; i<buttonStrings.length; i++){
+  var buttonStrings=  buttons[i].innerHTML;
+  buttonStrings.push('buttonStrings')
+}
+return buttonStrings;
+
+// var arr =  document.getElementsByClassName("demo");
+// //accessing the second element
+// arr[1].innerHTML = "Hi"; 
   // https://developer.mozilla.org/en-US/docs/Web/API/HTMLCollection
   // also you may want to convert the HTMLCollection to an array
-};
+ };
 
 function getNavLinksText( document ){
   // get the text content of all 'A' tags inside element with id 'navbarSupportedContent'
@@ -26,6 +44,12 @@ function getNavLinksText( document ){
 function addDashesToLinks( document ){
   // surround the text in navigation bar links with '-'
   // no return needed
+  var links = document.querySelectorAll('.nav-link');
+  links.forEach(function(item){
+   
+    item.textContent ='-' + item.textContent + '-';
+  });
+ 
 }
 
 function italicTitles( document ){
