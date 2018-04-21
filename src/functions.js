@@ -59,25 +59,56 @@ function addDashesToLinks( document ){
 }
 
 function italicTitles( document ){
-  var titleList= document.getElementsByClassName("heading-underline");
-  for (i=0; i<titleList.length; i++){
-    var title = titleList[i].textContent;
-    console.log('title is '+ title);
-if (title == 'Upcoming events'){
- 
-}
+
+//console.log(document.all)
+  var title =document.querySelectorAll(".article-title--sidebar a")
+  title.forEach(function(item){
+     item.innerHTML='<i>'+ item.innerHTML +'</i>';
+   })
+
+  
+
   }
 
-  // convert links in 'Upcoming Events' section to italic using `<i>` tag
-  // no return needed
-}
-
 function greenLinks( document ){
+  var elements = document.querySelectorAll(".article-read-more a");
+  elements.forEach(function(item) {
+  item.style.color = "green";
+});
   // make `Learn more` links green
   // no return needed
 }
 
 function addLink( document ){
+
+  var newulTag = document.createElement('ul'); //create ul tag
+  newulTag.setAttribute("class", "navbar-nav mr-auto")
+
+  var newLiTag = document.createElement('li'); //create li tag
+  newLiTag.setAttribute("class", "nav-item")
+  newulTag.appendChild(newLiTag)
+  
+  var newATag= document.createElement('a');// create an A tag
+  newATag.setAttribute('class', 'nav-link');
+  newATag.setAttribute('href','https://codeyourfuture.io/'); 
+   
+  var text = document.createTextNode ('Code Your Future');
+  newATag.appendChild(text)
+  newLiTag.appendChild(newATag)
+  newulTag.appendChild(newLiTag);  //<a> added into the <li> element
+
+   //create new class
+
+                  
+  
+
+
+var navList= document.getElementsByClassName('navbar-nav mr-auto')[0];
+navList.appendChild(newulTag);
+
+
+
+
   // Using `createElement` etc. create a new navbar item link 'Code Your Future' which links to
   // `https://codeyourfuture.io/`. It should have same structure as the other links
   // no return needed
@@ -95,7 +126,9 @@ if (typeof module !== 'undefined') {
     addLink
   }
 };
-
-console.log('hello');
-addDashesToLinks(document);
-italicTitles(document);
+//addLink( document )
+italicTitles( document )
+greenLinks(document)
+// console.log('hello');
+// addDashesToLinks(document);
+// italicTitles(document);
