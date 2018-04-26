@@ -51,16 +51,24 @@ function addDashesToLinks( document ){
   var textwo = document.getElementsByClassName('nav-link')
   var navbone = []
   for(i=0; i< textwo.length; i++){
-    var navbone = textwo[i];
-    
-  }
-
+    var navbone = textwo[i].innerHTML;
+    textwo[i].innerHTML= '-'+ navbone +'-';
+    }
 }
+  addDashesToLinks( document )
 
 function italicTitles( document ){
-  // convert links in 'Upcoming Events' section to italic using `<i>` tag
+  // convert links in 'Upcoming Events' section to 
+  // italic using `<i>` tag
   // no return needed
+  var italiDoc = document.querySelectorAll('.article-title a');
+  for ( i=0; i< italiDoc.length; i++){
+    var str = italiDoc[i].innerHTML;
+    italiDoc[i].innerHTML = '<i>' + str + '</i>';
+  }  
 }
+
+italicTitles( document )
 
 function greenLinks( document ){
   // make `Learn more` links green
@@ -70,17 +78,32 @@ function greenLinks( document ){
   //   learnGreen[i].style.color"green
   // ";
   // }
-  var turnGreen = document.querySelectorAll('.article-title , a');
-  for(i=0; i<turnGreen.length; i++){
-  turnGreen[i].style.color = 'green';
-}
+  var turnGreen = document.querySelectorAll('.article-read-more a');
+  for(i=0;  i<turnGreen.length;  i++){
+    turnGreen[i].style.color = 'green';
+  }
 }
 
+ greenLinks(document)
+
 function addLink( document ){
-  // Using `createElement` etc. create a new navbar item link 'Code Your Future' which links to
-  // `https://codeyourfuture.io/`. It should have same structure as the other links
+  // Using `createElement` etc. 
+  // create a new navbar item link 
+  // 'Code Your Future' which links to
+  // `https://codeyourfuture.io/`. 
+  // It should have same structure as the other links
   // no return needed
+  var lisTer =document.createElement('li');
+    lisTer.classList.add('nav-item');
+    var listDoc = document.createElement('a')
+    listDoc.classList.add('nav-link');
+    listDoc.href ='https://codeyourfuture.io/';
+    listDoc.innerHTML = 'Code Your Future';
+    lisTer.appendChild(listDoc);
+    document.body.appendChild(lisTer)
+    
 }
+  addLink( document )
 
 module.exports = {
   getTitle,
