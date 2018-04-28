@@ -60,6 +60,20 @@
 							<a class="btn btn-primary btn-lrg" href="#">Donate a bike today</a>
 							<a class="btn btn-secondary btn-lrg" href="#">Volunteer</a>
 							<a class="btn btn-secondary btn-lrg"  href="#">Contact us</a>
+							<script>
+								function readMore( document ){
+								var jsButton=document.createElement("btn") //create btn
+								jsButton.className= 'nav-item2' //add classname to the btn
+								// jsButton.setAttribute("class", "nav-item2"); will it give btn the class given?
+							
+								var textNode = document.createTextNode("Read More")//create a text node
+								jsButton.appendChild(textNode); //add text to Link 
+							
+							var readMoreButton=getElementsByClassName("buttons")[0]; //create readMoreButton
+							readMoreButton.appendChild(textNode); //add text to Link
+							}
+							</script>
+							
 						</div>
 					</div>
 					<h2 class="heading-underline">f</h2>
@@ -70,7 +84,7 @@
 							</div>
 							<p class="article-lead">Many refugees are placed in housing in areas where there are few jobs. Bikes provide low-cost transportation so that they can get to work, manage child care and do their shopping.</p>
 							<p class="article-read-more">
-								<!-- <img style= "width:200px height 200px"src=" bike.jpg" alt="" />-->
+								<img style= "width:100px height 100px"src="images/bike.jpg" alt="" />
 								<a href="#">
 									<span class="fa fa-caret-right"></span>
 									Learn more

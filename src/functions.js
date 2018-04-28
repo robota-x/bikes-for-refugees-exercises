@@ -32,7 +32,6 @@ function getAllButtonText( document ) {
 
   
 };
-
 function getNavLinksText( document ){
    var navBar= document.getElementById('navbarSupportedContent');
   var aTags=navBar.getElementsByTagName('A');
@@ -105,18 +104,18 @@ function addLink( document ){
   var newListItem= document.getElementsByClassName('navbar-nav mr-auto')[0];
   newListItem.appendChild(listItem) //add text to Link
 
-function readMore( document ){
-    var jsButton=document.createElement("btn") //create btn
-    jsButton.className= 'nav-item2' //add classname to the btn
-    // jsButton.setAttribute("class", "nav-item2"); will it give btn the class given?
+// function readMore( document ){
+//     var jsButton=document.createElement("btn") //create btn
+//     jsButton.className= 'nav-item2' //add classname to the btn
+//     // jsButton.setAttribute("class", "nav-item2"); will it give btn the class given?
 
-    var textNode = document.createTextNode("Read More")//create a text node
-    jsButton.appendChild(textNode); //add text to Link 
+//     var textNode = document.createTextNode("Read More")//create a text node
+//     jsButton.appendChild(textNode); //add text to Link 
 
-var readMoreButton=getElementsByClassName("buttons")[]; //create readMoreButton
-readMoreButton.appendChild(textNode); //add text to Link
-}
-readMore(document)
+// var readMoreButton=getElementsByClassName("buttons")[0]; //create readMoreButton
+// readMoreButton.appendChild(textNode); //add text to Link
+// }
+// readMore(document)
 
 function RefugeeNetWork(document){
     var newLink= document.createElement('li'); //create a list to add a tag inside
@@ -131,7 +130,7 @@ function RefugeeNetWork(document){
     newLink.appendChild(newLinkRefugee); //add link to <a> tag
 
  //put the newLink inside the mnchsterRefugeeSupport
-  var mnchsterRefugeeSupport = document.getElementsByClassName("navbar-nav mr-auto")[ ];
+  var mnchsterRefugeeSupport = document.getElementsByClassName("navbar-nav mr-auto")[0];
   mnchsterRefugeeSupport.appendChild(newLink);
     }
     RefugeeNetWork(document)
