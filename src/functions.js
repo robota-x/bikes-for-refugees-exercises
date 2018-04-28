@@ -20,13 +20,14 @@ function getAllButtonText( document ) {
   
   // https://developer.mozilla.org/en-US/docs/Web/API/HTMLCollection
   // also you may want to convert the HTMLCollection to an array
-  var docAll = document.getElementsByClassName('btn')
-  var txtger=[]
+ var txtger=[];
+  var docAll = document.getElementsByClassName('btn');
+
   for (i = 0; i < docAll.length; i++) {
  var getBtn =  docAll[i].innerHTML;
- txtger.push(getBtn.trim())
+ txtger.push(getBtn.trim());
  }
-return txtger
+return txtger;
 };
 
 function getNavLinksText( document ){
@@ -93,7 +94,7 @@ function addLink( document ){
   // `https://codeyourfuture.io/`. 
   // It should have same structure as the other links
   // no return needed
-  var lisTer =document.createElement('li');
+  var lisTer = document.createElement('li');
     lisTer.classList.add('nav-item');
     var listDoc = document.createElement('a')
     listDoc.classList.add('nav-link');
